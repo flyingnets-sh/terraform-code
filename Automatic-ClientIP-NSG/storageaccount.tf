@@ -8,7 +8,7 @@ resource "azurerm_storage_account" "storage_account_test" {
   network_rules {
       default_action = "Deny"
       ip_rules = ["${chomp(data.http.clientip.response_body)}/30"]
-      virtual_network_subnet_ids = azurerm_subnet.poctest_subnet01.id
+      virtual_network_subnet_ids = [azurerm_subnet.poctest_subnet01.id]
   }
 
   tags = {
