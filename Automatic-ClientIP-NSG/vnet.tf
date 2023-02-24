@@ -1,8 +1,8 @@
 resource "azurerm_virtual_network" "vnet01" {
   name                = "poctest_vnet"
   address_space       = ["10.0.0.0/24"]
-  location            = azurerm_resource_group.test.location
-  resource_group_name = azurerm_resource_group.test.name
+  resource_group_name      = var.azure-rg-1
+  location                 = var.loc1
   tags     = local.common_tags
 }
 
