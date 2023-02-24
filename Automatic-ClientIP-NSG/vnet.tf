@@ -6,6 +6,9 @@ resource "azurerm_virtual_network" "vnet01" {
   tags = {
     Environment = var.environment_tag
   }
+  depends_on = [
+    azurerm_resource_group.rg1
+  ]
 }
 
 resource "azurerm_subnet" "poctest_subnet01" {
