@@ -3,7 +3,9 @@ resource "azurerm_virtual_network" "vnet01" {
   address_space       = ["10.0.0.0/24"]
   resource_group_name      = var.azure-rg-1
   location                 = var.loc1
-  tags     = local.common_tags
+  tags = {
+    Environment = var.environment_tag
+  }
 }
 
 resource "azurerm_subnet" "poctest_subnet01" {
