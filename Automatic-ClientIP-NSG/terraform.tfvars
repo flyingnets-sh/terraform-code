@@ -1,3 +1,3 @@
-environment_tag = "jakewalsh90-Automatic-ClientIP-NSG"
-azure-rg-1      = "jakewalsh90-Automatic-ClientIP-NSG"
+environment_tag = "greg-Automatic-ClientIP"
+azure-rg-1      = "greg-Automatic-ClientIP"
 loc1            = "uk south"
